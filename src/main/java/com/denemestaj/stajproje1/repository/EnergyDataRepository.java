@@ -2,13 +2,17 @@ package com.denemestaj.stajproje1.repository;
 
 import com.denemestaj.stajproje1.model.EnergyData;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+
 
 import java.util.List;
+import java.time.LocalTime;
 
-@Repository
+
+
+
 public interface EnergyDataRepository extends JpaRepository<EnergyData, Long> {
-    // EnergyDataRepository.java
-    List<EnergyData> findBySayacSeriNo(String seriNo);
+    List<EnergyData> findBySayacSeriNoAndSayacSaati(String sayacSeriNo, LocalTime sayacSaati);
 
 }
+
+

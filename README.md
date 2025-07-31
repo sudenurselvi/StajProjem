@@ -24,6 +24,20 @@ Bu projede, RabbitMQ’dan Base64 ile şifrelenmiş enerji verilerini alıp Java
 - Uygulamayı çalıştır.
 - Producer’dan mesaj gönder, Consumer veriyi alıp işlesin.
 
+## CRUD İşlemleri
+
+Bu proje kapsamında **EnergyData** modeli üzerinde temel CRUD (Create, Read, Update, Delete) işlemleri REST API ile sağlanmaktadır.
+
+- **Create:** `GET /api/energy/createMock` adresi üzerinden örnek veri oluşturabilirsiniz. (Test amaçlıdır, gerçek projelerde POST metodu kullanılması önerilir.)
+- **Read:**
+    - Tüm verileri listelemek için: `GET /api/energy`
+    - Sayaç seri numarasına göre arama için: `GET /api/energy/seriNo/{seriNo}`
+- **Update:** Belirli seri numarasına sahip veriyi güncellemek için: `GET /api/energy/updateBySeriNo/{seriNo}`
+- **Delete:** Belirli seri numarasına sahip veriyi silmek için: `GET /api/energy/deleteBySeriNo/{seriNo}`
+
+Test işlemleri tarayıcı üzerinden kolayca yapılabilir. Daha gelişmiş kullanım için API istemcileri (Postman vb.) kullanılabilir.
+
+
 ## Notlar
 
 - OBIS kodları mesajda farklı sırada olabilir.
@@ -34,3 +48,5 @@ Bu projede, RabbitMQ’dan Base64 ile şifrelenmiş enerji verilerini alıp Java
 
 **Hazırlayan:** Sude Nur Selvi  
 2025 Staj Projesi
+
+
